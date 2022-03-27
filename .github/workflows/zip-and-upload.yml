@@ -1,0 +1,15 @@
+name: zip and upload
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - shell: bash
+        run: :
+            ls -la > filelist.txt
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+            name: upload-output
+            path: filelist.txt
