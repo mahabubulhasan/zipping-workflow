@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - shell: bash
-        run: :
+        run: |
             ls -la > filelist.txt
       - name: Upload output file
         uses: actions/upload-artifact@v3
