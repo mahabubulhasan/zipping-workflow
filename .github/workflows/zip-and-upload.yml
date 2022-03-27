@@ -14,4 +14,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
             name: upload-output
-            path: filelist.txt
+            path: release.zip
